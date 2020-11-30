@@ -228,6 +228,9 @@ class GANLoss(nn.Module):
         self.register_buffer('real_label', torch.tensor(target_real_label))
         self.register_buffer('fake_label', torch.tensor(target_fake_label))
         self.gan_mode = gan_mode
+        self.real_label_tensor = None
+        self.fake_label_tensor = None
+        self.Tensor = torch.FloatTensor
         if gan_mode == 'lsgan':
             self.loss = nn.MSELoss()
         elif gan_mode == 'vanilla':
@@ -253,7 +256,31 @@ class GANLoss(nn.Module):
         else:
             target_tensor = self.fake_label
         return target_tensor.expand_as(prediction)
+    def get_multiscale_target_tensor(self, input, target_is_real):
+        if target_is_real:
+            if self.real_label_tensor is None:
+                self.real_label_tensor = self.Tensor(1).fill_(self.real_label)
+                self.real_label_tensor.requires_grad_(False)
+            return self.real_label_tensor.expand_as(input)
+        else:
+            if self.fake_label_tensor is None:
+                self.fake_label_tensor = self.Tensor(1).fill_(self.fake_label)
+                self.fake_label_tensor.requires_grad_(False)
+            return self.fake_label_tensor.expand_as(input)
 
+    def MultiscaleLoss(self, input, target_is_real):
+        if self.gan_mode == 'vanilla':  # cross entropy loss
+            target_tensor = self.get_multiscale_target_tensor(input, target_is_real).to(device = 'cuda')
+            return self.loss(input, target_tensor)
+        elif self.gan_mode == 'lsgan':
+            target_tensor = self.get_multiscale_target_tensor(input, target_is_real).to(device = 'cuda')
+            return self.loss(input, target_tensor)
+        else:
+            # wgan
+            if target_is_real:
+                return -input.mean()
+            else:
+                return input.mean()
     def __call__(self, prediction, target_is_real):
         """Calculate loss given Discriminator's output and grount truth labels.
 
@@ -264,6 +291,18 @@ class GANLoss(nn.Module):
         Returns:
             the calculated loss.
         """
+        if isinstance(prediction, list):
+            loss = 0
+            for pred_i in prediction:
+                if isinstance(pred_i, list):
+                    pred_i = pred_i[-1]
+                pred_i = pred_i.to(device = 'cuda')
+                loss_tensor = self.MultiscaleLoss(pred_i,target_is_real)
+                bs = 1 if len(loss_tensor.size()) == 0 else loss_tensor.size(0)
+                new_loss = torch.mean(loss_tensor.view(bs, -1), dim=1)
+                loss += new_loss
+            return loss / len(prediction)
+        
         if self.gan_mode in ['lsgan', 'vanilla']:
             target_tensor = self.get_target_tensor(prediction, target_is_real)
             loss = self.loss(prediction, target_tensor)
