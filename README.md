@@ -1,3 +1,7 @@
+# DLIM Image domain transfer project
+
+This project is heavily based on pix2pix, we in fact started with the repository of pix2pix (https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix) and then modified and added some parts to try our own experiments. Therefore, before getting started it is important to set up all requirements for pix2pix thus the readme of the original repository is listed below, after which additional instructions will be added.
+
 
 <img src='imgs/horse2zebra.gif' align="right" width=384>
 
@@ -242,3 +246,99 @@ If you love cats, and love reading cool graphics, vision, and learning papers, p
 
 ## Acknowledgments
 Our code is inspired by [pytorch-DCGAN](https://github.com/pytorch/examples/tree/master/dcgan).
+
+
+# DLIM Image Domain Transfer additional requirements
+
+Please install torch-fidelity, since it is used in many places to evaluate our results. 
+https://github.com/toshas/torch-fidelity
+the easiest way to install it is using pip.
+
+In the following experiments the fid score and inception scores are used extensively. To get these metrics one simply has to run two commands in python. Below you can see an example. To adapt it to different networks only the path of the test results must be adjusted to the previously trained network.
+
+```
+from torch_fidelity import calculate_metrics
+
+#runs the inception pretrained classifier and looks how easily it can distinguish different stuff in the generated images
+#input1 = first path to sample of images
+#input2 = second path to sample of images
+#cuda = gpu usage
+#isc = inception score
+#kid = kernel inception distance
+#fid = frechet inception distance
+pretrained_metrics = calculate_metrics("./results/facades_label2photo_pretrained/test_latest/images/", "./datasets/facades/test/", cuda=False, isc=True, fid=True, kid=False, verbose=True)
+trained_metrics = calculate_metrics("./results/perceptual/test_latest/images/", "./datasets/facades/test/", cuda=False, isc=True, fid=True, kid=False, verbose=True)
+
+print("pretrained metrics", pretrained_metrics)
+print("trained metrics for perceptual", trained_metrics)
+```
+
+
+
+# Batch size experiments
+Run the following commands in the terminal to train pix2pix with different images per batch and test them. The results should look as below:
+```
+python ./train.py --dataroot ./datasets/facades --model pix2pix --name batch1 --direction BtoA --batch_size 1
+python ./train.py --dataroot ./datasets/facades --model pix2pix --name batch4 --direction BtoA --batch_size 4
+python ./train.py --dataroot ./datasets/facades --model pix2pix --name batch16 --direction BtoA --batch_size 16
+python ./train.py --dataroot ./datasets/facades --model pix2pix --name batch64 --direction BtoA --batch_size 64
+python ./train.py --dataroot ./datasets/facades --model pix2pix --name batch256 --direction BtoA --batch_size 256
+
+python ./test.py --dataroot ./datasets/facades --direction BtoA --model pix2pix --name batch1
+python ./test.py --dataroot ./datasets/facades --direction BtoA --model pix2pix --name batch4
+python ./test.py --dataroot ./datasets/facades --direction BtoA --model pix2pix --name batch16
+python ./test.py --dataroot ./datasets/facades --direction BtoA --model pix2pix --name batch64
+python ./test.py --dataroot ./datasets/facades --direction BtoA --model pix2pix --name batch256
+```
+Below you can see the results that we achieved together with the score on inception and fid.
+<img src='imgs/batch_size_experiments.png' width=600><img src='imgs/batch_size_experiments_graph.png' width=600>
+
+# Perceptual loss
+We used parts of the SPADE network (https://github.com/NVlabs/SPADE) to swap an L1 loss for a higher level perceptual loss. For that we added another class to the model folder. You can try it out by simply running it in the terminal`
+```
+python ./train.py --dataroot ./datasets/facades --model perceptual --name perceptual --direction BtoA 
+python ./test.py --dataroot ./datasets/facades --direction BtoA --model perceptual --name perceptual 
+```
+Below you can see the results that we achieved together with the score on inception and fid.
+<img src='imgs/perceptual_loss_facades.png' width=600> <img src='imgs/perceptual_loss_facades_score.png' width=600>
+perceptual_loss_facades_score
+
+# Adversarial losses
+We once again oriented ourselves on SPADES and implemented different losses that also compare the fake image directly to the correct one. Instead of L1 once can try LSGAN, WGAN and Hinge WGAN. The adjusted model (with an option loss) is saved in models/adversarial_losses_model.py
+```
+python ./train.py --dataroot ./datasets/facades --model adversarial_losses --name adv_og --direction BtoA --gan_mode original
+python ./test.py --dataroot ./datasets/facades --direction BtoA --model adversarial_losses --name adv_og
+
+python ./train.py --dataroot ./datasets/facades --model adversarial_losses --name adv_ls --direction BtoA --gan_mode ls
+python ./test.py --dataroot ./datasets/facades --direction BtoA --model adversarial_losses --name adv_ls
+
+python ./train.py --dataroot ./datasets/facades --model adversarial_losses --name adv_hinge --direction BtoA --gan_mode hinge
+python ./test.py --dataroot ./datasets/facades --direction BtoA --model adversarial_losses --name adv_hinge 
+
+python ./train.py --dataroot ./datasets/facades --model adversarial_losses --name adv_w --direction BtoA --gan_mode w
+python ./test.py --dataroot ./datasets/facades --direction BtoA --model adversarial_losses --name adv_w 
+```
+To then test the fidelity score we run
+```
+from torch_fidelity import calculate_metrics
+
+#runs the inception pretrained classifier and looks how easily it can distinguish different stuff in the generated images
+#input1 = first path to sample of images
+#input2 = second path to sample of images
+#cuda = gpu usage
+#isc = inception score
+#kid = kernel inception distance
+#fid = frechet inception distance
+cross_entropy_metric = calculate_metrics("./results/adv_og/test_latest/images/", "./datasets/facades/test/", cuda=False, isc=True, fid=True, kid=False, verbose=True)
+least_squares_metric = calculate_metrics("./results/adv_ls/test_latest/images/", "./datasets/facades/test/", cuda=False, isc=True, fid=True, kid=False, verbose=True)
+hinge_metric = calculate_metrics("./results/adv_hinge/test_latest/images/", "./datasets/facades/test/", cuda=False, isc=True, fid=True, kid=False, verbose=True)
+wasserstein_metric = calculate_metrics("./results/adv_w/test_latest/images/", "./datasets/facades/test/", cuda=False, isc=True, fid=True, kid=False, verbose=True)
+
+print("cross_entropy_metric", cross_entropy_metric)
+print("least_squares_metric", least_squares_metric)
+print("hinge_metric", hinge_metric)
+print("wasserstein_metric", wasserstein_metric)
+```
+
+Our results are as follows:
+<img src='imgs/adversarial_losses_scores.png' width=600><img src='imgs/adversarial_losses_examples.png' width=600>
