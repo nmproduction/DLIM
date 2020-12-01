@@ -189,7 +189,7 @@ Our results are as follows:
 
 the dataset is contained already in the repo
 
- for testing run `python test.py --dataroot ./datasets/cityscapes --direction BtoA --model pix2pix --name cityscapes_pix2pix`
+for testing run `python test.py --dataroot ./datasets/cityscapes --direction BtoA --model pix2pix --name cityscapes_pix2pix`
 
 
 ## Using the GUI for testing the most successful model
