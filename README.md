@@ -91,7 +91,7 @@ To help users better understand and use our code, we briefly overview the functi
 
 Please install torch-fidelity, since it is used in many places to evaluate our results. 
 https://github.com/toshas/torch-fidelity
-the easiest way to install it is using pip.
+the easiest way to install it is using pip. Notice that it might clash with some versions of pytorch, thus it may be inevitable to work with several environments.
 
 In the following experiments the fid score and inception scores are used extensively. To get these metrics one simply has to run two commands in python. Below you can see an example. To adapt it to different networks only the path of the test results must be adjusted to the previously trained network.
 
