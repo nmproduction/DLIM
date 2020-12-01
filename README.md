@@ -402,3 +402,22 @@ The use of this software is RESTRICTED to **non-commercial research and educatio
   year={2020}
 }
 ```
+**
+
+## Recreating the results
+ 
+
+ **Training the pix2pix model on the cityscapes dataset**
+
+ 1. Using pip install the requirements in requirements.txt with pip install -r requirements.txt
+ 2.  follow the instructions in conda-env.txt to install the rest of the required packages using anaconda (you can also use the import button in anaconda navigator and select conda-env.txt)
+ 3. for training: in the command line run `python train.py --n_epochs 100 --n_epochs_decay 100 --dataroot ./datasets/cityscapes --name cityscapes_pix2pix --model pix2pix --direction BtoA`
+
+the dataset is contained already in the repo
+
+ 4. for testing run `python test.py --dataroot ./datasets/cityscapes --direction BtoA --model pix2pix --name cityscapes_pix2pix`
+
+
+**Using the GUI for testing the model:**
+ 1. Execute the file MaskGAN_demo\demo_cityscapes.py using the command `python MaskGAN_demo\demo_cityscapes.py`
+ 2. in the GUI select a input image form the images folder in the same directory and the corresponding labels
