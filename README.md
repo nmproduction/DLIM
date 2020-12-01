@@ -31,26 +31,7 @@ cd DLIM
   - For Docker users, we provide the pre-built Docker image and Dockerfile. Please refer to our [Docker](docs/docker.md) page.
   - For Repl users, please click [![Run on Repl.it](https://repl.it/badge/github/junyanz/pytorch-CycleGAN-and-pix2pix)](https://repl.it/github/junyanz/pytorch-CycleGAN-and-pix2pix).
 
-### CycleGAN train/test
-- Download a CycleGAN dataset (e.g. maps):
-```bash
-bash ./datasets/download_cyclegan_dataset.sh maps
-```
-- To view training results and loss plots, run `python -m visdom.server` and click the URL http://localhost:8097.
-- Train a model:
-```bash
-#!./scripts/train_cyclegan.sh
-python train.py --dataroot ./datasets/maps --name maps_cyclegan --model cycle_gan
-```
-To see more intermediate results, check out `./checkpoints/maps_cyclegan/web/index.html`.
-- Test the model:
-```bash
-#!./scripts/test_cyclegan.sh
-python test.py --dataroot ./datasets/maps --name maps_cyclegan --model cycle_gan
-```
-- The test results will be saved to a html file here: `./results/maps_cyclegan/latest_test/index.html`.
-
-### pix2pix train/test
+### pix2pix simple train/test
 - Download a pix2pix dataset (e.g.[facades](http://cmp.felk.cvut.cz/~tylecr1/facade/)):
 ```bash
 bash ./datasets/download_pix2pix_dataset.sh facades
