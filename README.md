@@ -197,3 +197,6 @@ https://github.com/switchablenorms/CelebAMask-HQ
 
  1. Execute the file MaskGAN_demo\demo_cityscapes.py using the command `python MaskGAN_demo\demo_cityscapes.py`
  2. in the GUI select a input image form the images folder in the same directory and the corresponding labels
+
+## Stochastic Image Net
+In order to produce stochasticity in the generated images even after having trained a definite network different approaches were tried. The most straightforward was simply to keep dropout on even during testing.
