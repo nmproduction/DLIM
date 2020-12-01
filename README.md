@@ -141,7 +141,6 @@ python ./test.py --dataroot ./datasets/facades --direction BtoA --model perceptu
 ```
 Below you can see the results that we achieved together with the score on inception and fid.
 <img src='imgs/perceptual_loss_facades.png' width=600> <img src='imgs/perceptual_loss_facades_score.png' width=600>
-perceptual_loss_facades_score
 
 # Adversarial losses
 We once again oriented ourselves on SPADES and implemented different losses that also compare the fake image directly to the correct one. Instead of L1 once can try LSGAN, WGAN and Hinge WGAN. The adjusted model (with an option loss) is saved in models/adversarial_losses_model.py
@@ -181,6 +180,7 @@ print("wasserstein_metric", wasserstein_metric)
 ```
 
 Our results are as follows:
+
 <img src='imgs/adversarial_losses_scores.png' width=600><img src='imgs/adversarial_losses_examples.png' width=600>
 
 ## Training the pix2pix model on the cityscapes dataset
