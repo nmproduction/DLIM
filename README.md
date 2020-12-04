@@ -203,7 +203,7 @@ python ./test.py --dataroot ./datasets/facades --direction BtoA --model pix2pix 
 ```
 Our results are:
 
-<img src='imgs/discrimiator_scores.png' width=600><img src='imgs/discrimiator_scores.png' width=600>
+<img src='imgs/discrimiator_scores.PNG' width=600>
 
 ## Training the pix2pix model on the cityscapes dataset
 
