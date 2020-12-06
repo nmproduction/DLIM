@@ -183,6 +183,28 @@ Our results are as follows:
 
 <img src='imgs/adversarial_losses_scores.png' width=600><img src='imgs/adversarial_losses_examples.png' width=600>
 
+
+## Different Discimintators
+Run following code:
+Classical pix2pix discriminator
+```
+python ./train.py --dataroot ./datasets/facades --model pix2pix --name classic --direction BtoA
+python ./test.py --dataroot ./datasets/facades --direction BtoA --model pix2pix --name classic
+```
+Classical pix2pix multiscale discriminator 
+```
+python ./train.py --dataroot ./datasets/facades --model pix2pix --name classic --direction BtoA --netD multiscale 
+python ./test.py --dataroot ./datasets/facades --direction BtoA --model pix2pix --name classic
+```
+Sesame multiscale discriminator
+```
+python ./trainSesame.py --dataroot ./datasets/facades --model pix2pix --name classic --direction BtoA --netD sesam 
+python ./test.py --dataroot ./datasets/facades --direction BtoA --model pix2pix --name classic
+```
+Our results are:
+
+<img src='imgs/discrimiator_scores.PNG' width=600>
+
 ## Training the pix2pix model on the cityscapes dataset
 
  for training: in the command line run `python train.py --n_epochs 100 --n_epochs_decay 100 --dataroot ./datasets/cityscapes --name cityscapes_pix2pix --model pix2pix --direction BtoA`
