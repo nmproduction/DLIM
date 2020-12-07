@@ -12792,3 +12792,2238 @@ Traceback (most recent call last):
   File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/adapters.py", line 516, in send
     raise ConnectionError(e, request=request)
 requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /events (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fc269b0b110>: Failed to establish a new connection: [Errno 111] Connection refused'))
+(epoch: 35, iters: 100, time: 0.055, data: 0.235) G_GAN: 3.506 G_L1: 39.282 D_real: 0.011 D_fake: 0.121 
+Exception in user code:
+------------------------------------------------------------
+(epoch: 35, iters: 200, time: 0.060, data: 0.002) G_GAN: 2.359 G_L1: 27.167 D_real: 0.215 D_fake: 0.103 
+Exception in user code:
+------------------------------------------------------------
+(epoch: 35, iters: 300, time: 0.059, data: 0.001) G_GAN: 2.715 G_L1: 29.502 D_real: 0.097 D_fake: 0.092 
+Exception in user code:
+------------------------------------------------------------
+Exception in user code:
+------------------------------------------------------------
+Exception in user code:
+------------------------------------------------------------
+(epoch: 35, iters: 400, time: 0.335, data: 0.001) G_GAN: 1.050 G_L1: 25.738 D_real: 1.013 D_fake: 0.242 
+Exception in user code:
+------------------------------------------------------------
+saving the model at the end of epoch 35, iters 14000
+End of epoch 35 / 200 	 Time Taken: 25 sec
+learning rate 0.0002000 -> 0.0002000
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connection.py", line 160, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/util/connection.py", line 84, in create_connection
+    raise err
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/util/connection.py", line 74, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connectionpool.py", line 677, in urlopen
+    chunked=chunked,
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connectionpool.py", line 392, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1277, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1323, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1272, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1032, in _send_output
+    self.send(msg)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 972, in send
+    self.connect()
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connection.py", line 187, in connect
+    conn = self._new_conn()
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connection.py", line 172, in _new_conn
+    self, "Failed to establish a new connection: %s" % e
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7fc269b0b5d0>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/adapters.py", line 449, in send
+    timeout=timeout
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connectionpool.py", line 727, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/util/retry.py", line 439, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /events (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fc269b0b5d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/visdom/__init__.py", line 711, in _send
+    data=json.dumps(msg),
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/visdom/__init__.py", line 677, in _handle_post
+    r = self.session.post(url, data=data)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/sessions.py", line 578, in post
+    return self.request('POST', url, data=data, json=json, **kwargs)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/sessions.py", line 530, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/sessions.py", line 643, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /events (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fc269b0b5d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connection.py", line 160, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/util/connection.py", line 84, in create_connection
+    raise err
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/util/connection.py", line 74, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connectionpool.py", line 677, in urlopen
+    chunked=chunked,
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connectionpool.py", line 392, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1277, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1323, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1272, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1032, in _send_output
+    self.send(msg)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 972, in send
+    self.connect()
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connection.py", line 187, in connect
+    conn = self._new_conn()
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connection.py", line 172, in _new_conn
+    self, "Failed to establish a new connection: %s" % e
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7fc269a2a590>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/adapters.py", line 449, in send
+    timeout=timeout
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connectionpool.py", line 727, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/util/retry.py", line 439, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /events (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fc269a2a590>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/visdom/__init__.py", line 711, in _send
+    data=json.dumps(msg),
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/visdom/__init__.py", line 677, in _handle_post
+    r = self.session.post(url, data=data)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/sessions.py", line 578, in post
+    return self.request('POST', url, data=data, json=json, **kwargs)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/sessions.py", line 530, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/sessions.py", line 643, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /events (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fc269a2a590>: Failed to establish a new connection: [Errno 111] Connection refused'))
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connection.py", line 160, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/util/connection.py", line 84, in create_connection
+    raise err
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/util/connection.py", line 74, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connectionpool.py", line 677, in urlopen
+    chunked=chunked,
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connectionpool.py", line 392, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1277, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1323, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1272, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1032, in _send_output
+    self.send(msg)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 972, in send
+    self.connect()
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connection.py", line 187, in connect
+    conn = self._new_conn()
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connection.py", line 172, in _new_conn
+    self, "Failed to establish a new connection: %s" % e
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7fc269b0bd90>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/adapters.py", line 449, in send
+    timeout=timeout
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connectionpool.py", line 727, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/util/retry.py", line 439, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /events (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fc269b0bd90>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/visdom/__init__.py", line 711, in _send
+    data=json.dumps(msg),
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/visdom/__init__.py", line 677, in _handle_post
+    r = self.session.post(url, data=data)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/sessions.py", line 578, in post
+    return self.request('POST', url, data=data, json=json, **kwargs)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/sessions.py", line 530, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/sessions.py", line 643, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /events (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fc269b0bd90>: Failed to establish a new connection: [Errno 111] Connection refused'))
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connection.py", line 160, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/util/connection.py", line 84, in create_connection
+    raise err
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/util/connection.py", line 74, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connectionpool.py", line 677, in urlopen
+    chunked=chunked,
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connectionpool.py", line 392, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1277, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1323, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1272, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1032, in _send_output
+    self.send(msg)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 972, in send
+    self.connect()
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connection.py", line 187, in connect
+    conn = self._new_conn()
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connection.py", line 172, in _new_conn
+    self, "Failed to establish a new connection: %s" % e
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7fc269b0b7d0>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/adapters.py", line 449, in send
+    timeout=timeout
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connectionpool.py", line 727, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/util/retry.py", line 439, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /events (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fc269b0b7d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/visdom/__init__.py", line 711, in _send
+    data=json.dumps(msg),
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/visdom/__init__.py", line 677, in _handle_post
+    r = self.session.post(url, data=data)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/sessions.py", line 578, in post
+    return self.request('POST', url, data=data, json=json, **kwargs)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/sessions.py", line 530, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/sessions.py", line 643, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /events (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fc269b0b7d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connection.py", line 160, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/util/connection.py", line 84, in create_connection
+    raise err
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/util/connection.py", line 74, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connectionpool.py", line 677, in urlopen
+    chunked=chunked,
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connectionpool.py", line 392, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1277, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1323, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1272, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1032, in _send_output
+    self.send(msg)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 972, in send
+    self.connect()
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connection.py", line 187, in connect
+    conn = self._new_conn()
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connection.py", line 172, in _new_conn
+    self, "Failed to establish a new connection: %s" % e
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7fc269a2a390>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/adapters.py", line 449, in send
+    timeout=timeout
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connectionpool.py", line 727, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/util/retry.py", line 439, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /events (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fc269a2a390>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/visdom/__init__.py", line 711, in _send
+    data=json.dumps(msg),
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/visdom/__init__.py", line 677, in _handle_post
+    r = self.session.post(url, data=data)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/sessions.py", line 578, in post
+    return self.request('POST', url, data=data, json=json, **kwargs)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/sessions.py", line 530, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/sessions.py", line 643, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /events (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fc269a2a390>: Failed to establish a new connection: [Errno 111] Connection refused'))
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connection.py", line 160, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/util/connection.py", line 84, in create_connection
+    raise err
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/util/connection.py", line 74, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connectionpool.py", line 677, in urlopen
+    chunked=chunked,
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connectionpool.py", line 392, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1277, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1323, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1272, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1032, in _send_output
+    self.send(msg)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 972, in send
+    self.connect()
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connection.py", line 187, in connect
+    conn = self._new_conn()
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connection.py", line 172, in _new_conn
+    self, "Failed to establish a new connection: %s" % e
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7fc2696acd10>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/adapters.py", line 449, in send
+    timeout=timeout
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connectionpool.py", line 727, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/util/retry.py", line 439, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /events (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fc2696acd10>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/visdom/__init__.py", line 711, in _send
+    data=json.dumps(msg),
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/visdom/__init__.py", line 677, in _handle_post
+    r = self.session.post(url, data=data)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/sessions.py", line 578, in post
+    return self.request('POST', url, data=data, json=json, **kwargs)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/sessions.py", line 530, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/sessions.py", line 643, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /events (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fc2696acd10>: Failed to establish a new connection: [Errno 111] Connection refused'))
+(epoch: 36, iters: 100, time: 0.059, data: 0.253) G_GAN: 3.443 G_L1: 36.140 D_real: 0.021 D_fake: 0.064 
+Exception in user code:
+------------------------------------------------------------
+(epoch: 36, iters: 200, time: 0.055, data: 0.001) G_GAN: 3.394 G_L1: 33.673 D_real: 0.164 D_fake: 0.045 
+Exception in user code:
+------------------------------------------------------------
+(epoch: 36, iters: 300, time: 0.056, data: 0.002) G_GAN: 2.487 G_L1: 27.072 D_real: 0.105 D_fake: 0.142 
+Exception in user code:
+------------------------------------------------------------
+Exception in user code:
+------------------------------------------------------------
+Exception in user code:
+------------------------------------------------------------
+(epoch: 36, iters: 400, time: 0.386, data: 0.002) G_GAN: 3.644 G_L1: 41.094 D_real: 0.007 D_fake: 0.111 
+Exception in user code:
+------------------------------------------------------------
+End of epoch 36 / 200 	 Time Taken: 19 sec
+learning rate 0.0002000 -> 0.0002000
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connection.py", line 160, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/util/connection.py", line 84, in create_connection
+    raise err
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/util/connection.py", line 74, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connectionpool.py", line 677, in urlopen
+    chunked=chunked,
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connectionpool.py", line 392, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1277, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1323, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1272, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1032, in _send_output
+    self.send(msg)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 972, in send
+    self.connect()
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connection.py", line 187, in connect
+    conn = self._new_conn()
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connection.py", line 172, in _new_conn
+    self, "Failed to establish a new connection: %s" % e
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7fc2696b8050>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/adapters.py", line 449, in send
+    timeout=timeout
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connectionpool.py", line 727, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/util/retry.py", line 439, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /events (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fc2696b8050>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/visdom/__init__.py", line 711, in _send
+    data=json.dumps(msg),
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/visdom/__init__.py", line 677, in _handle_post
+    r = self.session.post(url, data=data)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/sessions.py", line 578, in post
+    return self.request('POST', url, data=data, json=json, **kwargs)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/sessions.py", line 530, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/sessions.py", line 643, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /events (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fc2696b8050>: Failed to establish a new connection: [Errno 111] Connection refused'))
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connection.py", line 160, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/util/connection.py", line 84, in create_connection
+    raise err
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/util/connection.py", line 74, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connectionpool.py", line 677, in urlopen
+    chunked=chunked,
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connectionpool.py", line 392, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1277, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1323, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1272, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1032, in _send_output
+    self.send(msg)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 972, in send
+    self.connect()
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connection.py", line 187, in connect
+    conn = self._new_conn()
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connection.py", line 172, in _new_conn
+    self, "Failed to establish a new connection: %s" % e
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7fc2696b9fd0>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/adapters.py", line 449, in send
+    timeout=timeout
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connectionpool.py", line 727, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/util/retry.py", line 439, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /events (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fc2696b9fd0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/visdom/__init__.py", line 711, in _send
+    data=json.dumps(msg),
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/visdom/__init__.py", line 677, in _handle_post
+    r = self.session.post(url, data=data)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/sessions.py", line 578, in post
+    return self.request('POST', url, data=data, json=json, **kwargs)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/sessions.py", line 530, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/sessions.py", line 643, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /events (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fc2696b9fd0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connection.py", line 160, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/util/connection.py", line 84, in create_connection
+    raise err
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/util/connection.py", line 74, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connectionpool.py", line 677, in urlopen
+    chunked=chunked,
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connectionpool.py", line 392, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1277, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1323, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1272, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1032, in _send_output
+    self.send(msg)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 972, in send
+    self.connect()
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connection.py", line 187, in connect
+    conn = self._new_conn()
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connection.py", line 172, in _new_conn
+    self, "Failed to establish a new connection: %s" % e
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7fc2696b9c50>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/adapters.py", line 449, in send
+    timeout=timeout
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connectionpool.py", line 727, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/util/retry.py", line 439, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /events (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fc2696b9c50>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/visdom/__init__.py", line 711, in _send
+    data=json.dumps(msg),
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/visdom/__init__.py", line 677, in _handle_post
+    r = self.session.post(url, data=data)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/sessions.py", line 578, in post
+    return self.request('POST', url, data=data, json=json, **kwargs)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/sessions.py", line 530, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/sessions.py", line 643, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /events (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fc2696b9c50>: Failed to establish a new connection: [Errno 111] Connection refused'))
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connection.py", line 160, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/util/connection.py", line 84, in create_connection
+    raise err
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/util/connection.py", line 74, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connectionpool.py", line 677, in urlopen
+    chunked=chunked,
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connectionpool.py", line 392, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1277, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1323, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1272, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1032, in _send_output
+    self.send(msg)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 972, in send
+    self.connect()
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connection.py", line 187, in connect
+    conn = self._new_conn()
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connection.py", line 172, in _new_conn
+    self, "Failed to establish a new connection: %s" % e
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7fc2696b94d0>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/adapters.py", line 449, in send
+    timeout=timeout
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connectionpool.py", line 727, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/util/retry.py", line 439, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /events (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fc2696b94d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/visdom/__init__.py", line 711, in _send
+    data=json.dumps(msg),
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/visdom/__init__.py", line 677, in _handle_post
+    r = self.session.post(url, data=data)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/sessions.py", line 578, in post
+    return self.request('POST', url, data=data, json=json, **kwargs)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/sessions.py", line 530, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/sessions.py", line 643, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /events (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fc2696b94d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connection.py", line 160, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/util/connection.py", line 84, in create_connection
+    raise err
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/util/connection.py", line 74, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connectionpool.py", line 677, in urlopen
+    chunked=chunked,
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connectionpool.py", line 392, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1277, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1323, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1272, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1032, in _send_output
+    self.send(msg)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 972, in send
+    self.connect()
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connection.py", line 187, in connect
+    conn = self._new_conn()
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connection.py", line 172, in _new_conn
+    self, "Failed to establish a new connection: %s" % e
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7fc2696b8550>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/adapters.py", line 449, in send
+    timeout=timeout
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connectionpool.py", line 727, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/util/retry.py", line 439, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /events (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fc2696b8550>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/visdom/__init__.py", line 711, in _send
+    data=json.dumps(msg),
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/visdom/__init__.py", line 677, in _handle_post
+    r = self.session.post(url, data=data)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/sessions.py", line 578, in post
+    return self.request('POST', url, data=data, json=json, **kwargs)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/sessions.py", line 530, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/sessions.py", line 643, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /events (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fc2696b8550>: Failed to establish a new connection: [Errno 111] Connection refused'))
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connection.py", line 160, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/util/connection.py", line 84, in create_connection
+    raise err
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/util/connection.py", line 74, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connectionpool.py", line 677, in urlopen
+    chunked=chunked,
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connectionpool.py", line 392, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1277, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1323, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1272, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1032, in _send_output
+    self.send(msg)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 972, in send
+    self.connect()
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connection.py", line 187, in connect
+    conn = self._new_conn()
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connection.py", line 172, in _new_conn
+    self, "Failed to establish a new connection: %s" % e
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7fc2699dde90>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/adapters.py", line 449, in send
+    timeout=timeout
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connectionpool.py", line 727, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/util/retry.py", line 439, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /events (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fc2699dde90>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/visdom/__init__.py", line 711, in _send
+    data=json.dumps(msg),
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/visdom/__init__.py", line 677, in _handle_post
+    r = self.session.post(url, data=data)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/sessions.py", line 578, in post
+    return self.request('POST', url, data=data, json=json, **kwargs)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/sessions.py", line 530, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/sessions.py", line 643, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /events (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fc2699dde90>: Failed to establish a new connection: [Errno 111] Connection refused'))
+(epoch: 37, iters: 100, time: 0.058, data: 0.187) G_GAN: 4.418 G_L1: 40.663 D_real: 0.039 D_fake: 0.020 
+Exception in user code:
+------------------------------------------------------------
+(epoch: 37, iters: 200, time: 0.058, data: 0.001) G_GAN: 3.338 G_L1: 32.520 D_real: 0.027 D_fake: 0.153 
+Exception in user code:
+------------------------------------------------------------
+(epoch: 37, iters: 300, time: 0.055, data: 0.002) G_GAN: 3.663 G_L1: 34.006 D_real: 0.009 D_fake: 0.066 
+Exception in user code:
+------------------------------------------------------------
+Exception in user code:
+------------------------------------------------------------
+Exception in user code:
+------------------------------------------------------------
+(epoch: 37, iters: 400, time: 0.332, data: 0.001) G_GAN: 1.950 G_L1: 28.950 D_real: 0.410 D_fake: 0.099 
+Exception in user code:
+------------------------------------------------------------
+End of epoch 37 / 200 	 Time Taken: 19 sec
+learning rate 0.0002000 -> 0.0002000
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connection.py", line 160, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/util/connection.py", line 84, in create_connection
+    raise err
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/util/connection.py", line 74, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connectionpool.py", line 677, in urlopen
+    chunked=chunked,
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connectionpool.py", line 392, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1277, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1323, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1272, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1032, in _send_output
+    self.send(msg)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 972, in send
+    self.connect()
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connection.py", line 187, in connect
+    conn = self._new_conn()
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connection.py", line 172, in _new_conn
+    self, "Failed to establish a new connection: %s" % e
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7fc2699dbbd0>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/adapters.py", line 449, in send
+    timeout=timeout
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connectionpool.py", line 727, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/util/retry.py", line 439, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /events (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fc2699dbbd0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/visdom/__init__.py", line 711, in _send
+    data=json.dumps(msg),
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/visdom/__init__.py", line 677, in _handle_post
+    r = self.session.post(url, data=data)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/sessions.py", line 578, in post
+    return self.request('POST', url, data=data, json=json, **kwargs)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/sessions.py", line 530, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/sessions.py", line 643, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /events (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fc2699dbbd0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connection.py", line 160, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/util/connection.py", line 84, in create_connection
+    raise err
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/util/connection.py", line 74, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connectionpool.py", line 677, in urlopen
+    chunked=chunked,
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connectionpool.py", line 392, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1277, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1323, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1272, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1032, in _send_output
+    self.send(msg)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 972, in send
+    self.connect()
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connection.py", line 187, in connect
+    conn = self._new_conn()
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connection.py", line 172, in _new_conn
+    self, "Failed to establish a new connection: %s" % e
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7fc269a122d0>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/adapters.py", line 449, in send
+    timeout=timeout
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connectionpool.py", line 727, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/util/retry.py", line 439, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /events (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fc269a122d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/visdom/__init__.py", line 711, in _send
+    data=json.dumps(msg),
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/visdom/__init__.py", line 677, in _handle_post
+    r = self.session.post(url, data=data)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/sessions.py", line 578, in post
+    return self.request('POST', url, data=data, json=json, **kwargs)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/sessions.py", line 530, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/sessions.py", line 643, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /events (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fc269a122d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connection.py", line 160, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/util/connection.py", line 84, in create_connection
+    raise err
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/util/connection.py", line 74, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connectionpool.py", line 677, in urlopen
+    chunked=chunked,
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connectionpool.py", line 392, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1277, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1323, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1272, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1032, in _send_output
+    self.send(msg)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 972, in send
+    self.connect()
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connection.py", line 187, in connect
+    conn = self._new_conn()
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connection.py", line 172, in _new_conn
+    self, "Failed to establish a new connection: %s" % e
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7fc2696cff50>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/adapters.py", line 449, in send
+    timeout=timeout
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connectionpool.py", line 727, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/util/retry.py", line 439, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /events (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fc2696cff50>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/visdom/__init__.py", line 711, in _send
+    data=json.dumps(msg),
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/visdom/__init__.py", line 677, in _handle_post
+    r = self.session.post(url, data=data)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/sessions.py", line 578, in post
+    return self.request('POST', url, data=data, json=json, **kwargs)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/sessions.py", line 530, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/sessions.py", line 643, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /events (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fc2696cff50>: Failed to establish a new connection: [Errno 111] Connection refused'))
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connection.py", line 160, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/util/connection.py", line 84, in create_connection
+    raise err
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/util/connection.py", line 74, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connectionpool.py", line 677, in urlopen
+    chunked=chunked,
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connectionpool.py", line 392, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1277, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1323, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1272, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1032, in _send_output
+    self.send(msg)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 972, in send
+    self.connect()
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connection.py", line 187, in connect
+    conn = self._new_conn()
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connection.py", line 172, in _new_conn
+    self, "Failed to establish a new connection: %s" % e
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7fc2696cff50>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/adapters.py", line 449, in send
+    timeout=timeout
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connectionpool.py", line 727, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/util/retry.py", line 439, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /events (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fc2696cff50>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/visdom/__init__.py", line 711, in _send
+    data=json.dumps(msg),
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/visdom/__init__.py", line 677, in _handle_post
+    r = self.session.post(url, data=data)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/sessions.py", line 578, in post
+    return self.request('POST', url, data=data, json=json, **kwargs)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/sessions.py", line 530, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/sessions.py", line 643, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /events (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fc2696cff50>: Failed to establish a new connection: [Errno 111] Connection refused'))
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connection.py", line 160, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/util/connection.py", line 84, in create_connection
+    raise err
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/util/connection.py", line 74, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connectionpool.py", line 677, in urlopen
+    chunked=chunked,
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connectionpool.py", line 392, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1277, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1323, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1272, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1032, in _send_output
+    self.send(msg)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 972, in send
+    self.connect()
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connection.py", line 187, in connect
+    conn = self._new_conn()
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connection.py", line 172, in _new_conn
+    self, "Failed to establish a new connection: %s" % e
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7fc269a12110>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/adapters.py", line 449, in send
+    timeout=timeout
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connectionpool.py", line 727, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/util/retry.py", line 439, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /events (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fc269a12110>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/visdom/__init__.py", line 711, in _send
+    data=json.dumps(msg),
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/visdom/__init__.py", line 677, in _handle_post
+    r = self.session.post(url, data=data)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/sessions.py", line 578, in post
+    return self.request('POST', url, data=data, json=json, **kwargs)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/sessions.py", line 530, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/sessions.py", line 643, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /events (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fc269a12110>: Failed to establish a new connection: [Errno 111] Connection refused'))
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connection.py", line 160, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/util/connection.py", line 84, in create_connection
+    raise err
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/util/connection.py", line 74, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connectionpool.py", line 677, in urlopen
+    chunked=chunked,
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connectionpool.py", line 392, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1277, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1323, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1272, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1032, in _send_output
+    self.send(msg)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 972, in send
+    self.connect()
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connection.py", line 187, in connect
+    conn = self._new_conn()
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connection.py", line 172, in _new_conn
+    self, "Failed to establish a new connection: %s" % e
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7fc269660690>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/adapters.py", line 449, in send
+    timeout=timeout
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connectionpool.py", line 727, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/util/retry.py", line 439, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /events (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fc269660690>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/visdom/__init__.py", line 711, in _send
+    data=json.dumps(msg),
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/visdom/__init__.py", line 677, in _handle_post
+    r = self.session.post(url, data=data)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/sessions.py", line 578, in post
+    return self.request('POST', url, data=data, json=json, **kwargs)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/sessions.py", line 530, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/sessions.py", line 643, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /events (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fc269660690>: Failed to establish a new connection: [Errno 111] Connection refused'))
+(epoch: 38, iters: 100, time: 0.058, data: 0.193) G_GAN: 2.557 G_L1: 32.476 D_real: 0.026 D_fake: 0.472 
+Exception in user code:
+------------------------------------------------------------
+(epoch: 38, iters: 200, time: 0.057, data: 0.002) G_GAN: 1.285 G_L1: 33.435 D_real: 0.237 D_fake: 0.661 
+Exception in user code:
+------------------------------------------------------------
+saving the latest model (epoch 38, total_iters 15000)
+(epoch: 38, iters: 300, time: 0.055, data: 0.004) G_GAN: 3.694 G_L1: 35.229 D_real: 0.001 D_fake: 4.523 
+Exception in user code:
+------------------------------------------------------------
+Exception in user code:
+------------------------------------------------------------
+Exception in user code:
+------------------------------------------------------------
+(epoch: 38, iters: 400, time: 0.314, data: 0.002) G_GAN: 2.088 G_L1: 47.048 D_real: 0.096 D_fake: 0.254 
+Exception in user code:
+------------------------------------------------------------
+End of epoch 38 / 200 	 Time Taken: 22 sec
+learning rate 0.0002000 -> 0.0002000
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connection.py", line 160, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/util/connection.py", line 84, in create_connection
+    raise err
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/util/connection.py", line 74, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connectionpool.py", line 677, in urlopen
+    chunked=chunked,
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connectionpool.py", line 392, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1277, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1323, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1272, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1032, in _send_output
+    self.send(msg)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 972, in send
+    self.connect()
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connection.py", line 187, in connect
+    conn = self._new_conn()
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connection.py", line 172, in _new_conn
+    self, "Failed to establish a new connection: %s" % e
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7fc269672210>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/adapters.py", line 449, in send
+    timeout=timeout
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connectionpool.py", line 727, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/util/retry.py", line 439, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /events (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fc269672210>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/visdom/__init__.py", line 711, in _send
+    data=json.dumps(msg),
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/visdom/__init__.py", line 677, in _handle_post
+    r = self.session.post(url, data=data)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/sessions.py", line 578, in post
+    return self.request('POST', url, data=data, json=json, **kwargs)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/sessions.py", line 530, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/sessions.py", line 643, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /events (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fc269672210>: Failed to establish a new connection: [Errno 111] Connection refused'))
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connection.py", line 160, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/util/connection.py", line 84, in create_connection
+    raise err
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/util/connection.py", line 74, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connectionpool.py", line 677, in urlopen
+    chunked=chunked,
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connectionpool.py", line 392, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1277, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1323, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1272, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1032, in _send_output
+    self.send(msg)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 972, in send
+    self.connect()
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connection.py", line 187, in connect
+    conn = self._new_conn()
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connection.py", line 172, in _new_conn
+    self, "Failed to establish a new connection: %s" % e
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7fc26966f450>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/adapters.py", line 449, in send
+    timeout=timeout
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connectionpool.py", line 727, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/util/retry.py", line 439, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /events (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fc26966f450>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/visdom/__init__.py", line 711, in _send
+    data=json.dumps(msg),
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/visdom/__init__.py", line 677, in _handle_post
+    r = self.session.post(url, data=data)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/sessions.py", line 578, in post
+    return self.request('POST', url, data=data, json=json, **kwargs)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/sessions.py", line 530, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/sessions.py", line 643, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /events (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fc26966f450>: Failed to establish a new connection: [Errno 111] Connection refused'))
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connection.py", line 160, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/util/connection.py", line 84, in create_connection
+    raise err
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/util/connection.py", line 74, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connectionpool.py", line 677, in urlopen
+    chunked=chunked,
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connectionpool.py", line 392, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1277, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1323, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1272, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1032, in _send_output
+    self.send(msg)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 972, in send
+    self.connect()
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connection.py", line 187, in connect
+    conn = self._new_conn()
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connection.py", line 172, in _new_conn
+    self, "Failed to establish a new connection: %s" % e
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7fc269660c50>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/adapters.py", line 449, in send
+    timeout=timeout
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connectionpool.py", line 727, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/util/retry.py", line 439, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /events (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fc269660c50>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/visdom/__init__.py", line 711, in _send
+    data=json.dumps(msg),
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/visdom/__init__.py", line 677, in _handle_post
+    r = self.session.post(url, data=data)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/sessions.py", line 578, in post
+    return self.request('POST', url, data=data, json=json, **kwargs)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/sessions.py", line 530, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/sessions.py", line 643, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /events (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fc269660c50>: Failed to establish a new connection: [Errno 111] Connection refused'))
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connection.py", line 160, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/util/connection.py", line 84, in create_connection
+    raise err
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/util/connection.py", line 74, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connectionpool.py", line 677, in urlopen
+    chunked=chunked,
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connectionpool.py", line 392, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1277, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1323, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1272, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1032, in _send_output
+    self.send(msg)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 972, in send
+    self.connect()
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connection.py", line 187, in connect
+    conn = self._new_conn()
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connection.py", line 172, in _new_conn
+    self, "Failed to establish a new connection: %s" % e
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7fc269672210>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/adapters.py", line 449, in send
+    timeout=timeout
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connectionpool.py", line 727, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/util/retry.py", line 439, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /events (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fc269672210>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/visdom/__init__.py", line 711, in _send
+    data=json.dumps(msg),
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/visdom/__init__.py", line 677, in _handle_post
+    r = self.session.post(url, data=data)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/sessions.py", line 578, in post
+    return self.request('POST', url, data=data, json=json, **kwargs)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/sessions.py", line 530, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/sessions.py", line 643, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /events (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fc269672210>: Failed to establish a new connection: [Errno 111] Connection refused'))
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connection.py", line 160, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/util/connection.py", line 84, in create_connection
+    raise err
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/util/connection.py", line 74, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connectionpool.py", line 677, in urlopen
+    chunked=chunked,
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connectionpool.py", line 392, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1277, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1323, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1272, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1032, in _send_output
+    self.send(msg)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 972, in send
+    self.connect()
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connection.py", line 187, in connect
+    conn = self._new_conn()
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connection.py", line 172, in _new_conn
+    self, "Failed to establish a new connection: %s" % e
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7fc269660810>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/adapters.py", line 449, in send
+    timeout=timeout
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connectionpool.py", line 727, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/util/retry.py", line 439, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /events (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fc269660810>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/visdom/__init__.py", line 711, in _send
+    data=json.dumps(msg),
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/visdom/__init__.py", line 677, in _handle_post
+    r = self.session.post(url, data=data)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/sessions.py", line 578, in post
+    return self.request('POST', url, data=data, json=json, **kwargs)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/sessions.py", line 530, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/sessions.py", line 643, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /events (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fc269660810>: Failed to establish a new connection: [Errno 111] Connection refused'))
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connection.py", line 160, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/util/connection.py", line 84, in create_connection
+    raise err
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/util/connection.py", line 74, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connectionpool.py", line 677, in urlopen
+    chunked=chunked,
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connectionpool.py", line 392, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1277, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1323, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1272, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1032, in _send_output
+    self.send(msg)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 972, in send
+    self.connect()
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connection.py", line 187, in connect
+    conn = self._new_conn()
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connection.py", line 172, in _new_conn
+    self, "Failed to establish a new connection: %s" % e
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7fc26984c510>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/adapters.py", line 449, in send
+    timeout=timeout
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connectionpool.py", line 727, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/util/retry.py", line 439, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /events (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fc26984c510>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/visdom/__init__.py", line 711, in _send
+    data=json.dumps(msg),
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/visdom/__init__.py", line 677, in _handle_post
+    r = self.session.post(url, data=data)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/sessions.py", line 578, in post
+    return self.request('POST', url, data=data, json=json, **kwargs)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/sessions.py", line 530, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/sessions.py", line 643, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /events (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fc26984c510>: Failed to establish a new connection: [Errno 111] Connection refused'))
+(epoch: 39, iters: 100, time: 0.054, data: 0.257) G_GAN: 2.820 G_L1: 33.116 D_real: 0.013 D_fake: 0.142 
+Exception in user code:
+------------------------------------------------------------
+(epoch: 39, iters: 200, time: 0.059, data: 0.002) G_GAN: 2.398 G_L1: 29.977 D_real: 0.084 D_fake: 0.110 
+Exception in user code:
+------------------------------------------------------------
+(epoch: 39, iters: 300, time: 0.056, data: 0.002) G_GAN: 2.647 G_L1: 36.203 D_real: 0.002 D_fake: 0.744 
+Exception in user code:
+------------------------------------------------------------
+Exception in user code:
+------------------------------------------------------------
+Exception in user code:
+------------------------------------------------------------
+(epoch: 39, iters: 400, time: 0.315, data: 0.001) G_GAN: 1.702 G_L1: 32.324 D_real: 0.278 D_fake: 0.277 
+Exception in user code:
+------------------------------------------------------------
+End of epoch 39 / 200 	 Time Taken: 19 sec
+learning rate 0.0002000 -> 0.0002000
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connection.py", line 160, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/util/connection.py", line 84, in create_connection
+    raise err
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/util/connection.py", line 74, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connectionpool.py", line 677, in urlopen
+    chunked=chunked,
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connectionpool.py", line 392, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1277, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1323, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1272, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1032, in _send_output
+    self.send(msg)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 972, in send
+    self.connect()
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connection.py", line 187, in connect
+    conn = self._new_conn()
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connection.py", line 172, in _new_conn
+    self, "Failed to establish a new connection: %s" % e
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7fc269857e50>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/adapters.py", line 449, in send
+    timeout=timeout
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connectionpool.py", line 727, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/util/retry.py", line 439, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /events (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fc269857e50>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/visdom/__init__.py", line 711, in _send
+    data=json.dumps(msg),
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/visdom/__init__.py", line 677, in _handle_post
+    r = self.session.post(url, data=data)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/sessions.py", line 578, in post
+    return self.request('POST', url, data=data, json=json, **kwargs)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/sessions.py", line 530, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/sessions.py", line 643, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /events (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fc269857e50>: Failed to establish a new connection: [Errno 111] Connection refused'))
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connection.py", line 160, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/util/connection.py", line 84, in create_connection
+    raise err
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/util/connection.py", line 74, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connectionpool.py", line 677, in urlopen
+    chunked=chunked,
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connectionpool.py", line 392, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1277, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1323, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1272, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1032, in _send_output
+    self.send(msg)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 972, in send
+    self.connect()
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connection.py", line 187, in connect
+    conn = self._new_conn()
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connection.py", line 172, in _new_conn
+    self, "Failed to establish a new connection: %s" % e
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7fc26984ce50>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/adapters.py", line 449, in send
+    timeout=timeout
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connectionpool.py", line 727, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/util/retry.py", line 439, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /events (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fc26984ce50>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/visdom/__init__.py", line 711, in _send
+    data=json.dumps(msg),
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/visdom/__init__.py", line 677, in _handle_post
+    r = self.session.post(url, data=data)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/sessions.py", line 578, in post
+    return self.request('POST', url, data=data, json=json, **kwargs)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/sessions.py", line 530, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/sessions.py", line 643, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /events (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fc26984ce50>: Failed to establish a new connection: [Errno 111] Connection refused'))
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connection.py", line 160, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/util/connection.py", line 84, in create_connection
+    raise err
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/util/connection.py", line 74, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connectionpool.py", line 677, in urlopen
+    chunked=chunked,
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connectionpool.py", line 392, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1277, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1323, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1272, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1032, in _send_output
+    self.send(msg)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 972, in send
+    self.connect()
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connection.py", line 187, in connect
+    conn = self._new_conn()
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connection.py", line 172, in _new_conn
+    self, "Failed to establish a new connection: %s" % e
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7fc2697e5f90>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/adapters.py", line 449, in send
+    timeout=timeout
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connectionpool.py", line 727, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/util/retry.py", line 439, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /events (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fc2697e5f90>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/visdom/__init__.py", line 711, in _send
+    data=json.dumps(msg),
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/visdom/__init__.py", line 677, in _handle_post
+    r = self.session.post(url, data=data)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/sessions.py", line 578, in post
+    return self.request('POST', url, data=data, json=json, **kwargs)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/sessions.py", line 530, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/sessions.py", line 643, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /events (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fc2697e5f90>: Failed to establish a new connection: [Errno 111] Connection refused'))
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connection.py", line 160, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/util/connection.py", line 84, in create_connection
+    raise err
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/util/connection.py", line 74, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connectionpool.py", line 677, in urlopen
+    chunked=chunked,
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connectionpool.py", line 392, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1277, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1323, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1272, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1032, in _send_output
+    self.send(msg)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 972, in send
+    self.connect()
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connection.py", line 187, in connect
+    conn = self._new_conn()
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connection.py", line 172, in _new_conn
+    self, "Failed to establish a new connection: %s" % e
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7fc2697e5e50>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/adapters.py", line 449, in send
+    timeout=timeout
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connectionpool.py", line 727, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/util/retry.py", line 439, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /events (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fc2697e5e50>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/visdom/__init__.py", line 711, in _send
+    data=json.dumps(msg),
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/visdom/__init__.py", line 677, in _handle_post
+    r = self.session.post(url, data=data)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/sessions.py", line 578, in post
+    return self.request('POST', url, data=data, json=json, **kwargs)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/sessions.py", line 530, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/sessions.py", line 643, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /events (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fc2697e5e50>: Failed to establish a new connection: [Errno 111] Connection refused'))
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connection.py", line 160, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/util/connection.py", line 84, in create_connection
+    raise err
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/util/connection.py", line 74, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connectionpool.py", line 677, in urlopen
+    chunked=chunked,
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connectionpool.py", line 392, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1277, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1323, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1272, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1032, in _send_output
+    self.send(msg)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 972, in send
+    self.connect()
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connection.py", line 187, in connect
+    conn = self._new_conn()
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connection.py", line 172, in _new_conn
+    self, "Failed to establish a new connection: %s" % e
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7fc269857a10>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/adapters.py", line 449, in send
+    timeout=timeout
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connectionpool.py", line 727, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/util/retry.py", line 439, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /events (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fc269857a10>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/visdom/__init__.py", line 711, in _send
+    data=json.dumps(msg),
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/visdom/__init__.py", line 677, in _handle_post
+    r = self.session.post(url, data=data)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/sessions.py", line 578, in post
+    return self.request('POST', url, data=data, json=json, **kwargs)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/sessions.py", line 530, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/sessions.py", line 643, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /events (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fc269857a10>: Failed to establish a new connection: [Errno 111] Connection refused'))
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connection.py", line 160, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/util/connection.py", line 84, in create_connection
+    raise err
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/util/connection.py", line 74, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connectionpool.py", line 677, in urlopen
+    chunked=chunked,
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connectionpool.py", line 392, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1277, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1323, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1272, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1032, in _send_output
+    self.send(msg)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 972, in send
+    self.connect()
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connection.py", line 187, in connect
+    conn = self._new_conn()
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connection.py", line 172, in _new_conn
+    self, "Failed to establish a new connection: %s" % e
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7fc2698282d0>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/adapters.py", line 449, in send
+    timeout=timeout
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connectionpool.py", line 727, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/util/retry.py", line 439, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /events (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fc2698282d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/visdom/__init__.py", line 711, in _send
+    data=json.dumps(msg),
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/visdom/__init__.py", line 677, in _handle_post
+    r = self.session.post(url, data=data)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/sessions.py", line 578, in post
+    return self.request('POST', url, data=data, json=json, **kwargs)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/sessions.py", line 530, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/sessions.py", line 643, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /events (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fc2698282d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+(epoch: 40, iters: 100, time: 0.059, data: 0.218) G_GAN: 1.066 G_L1: 23.861 D_real: 0.716 D_fake: 0.228 
+Exception in user code:
+------------------------------------------------------------
+(epoch: 40, iters: 200, time: 0.055, data: 0.002) G_GAN: 3.312 G_L1: 35.502 D_real: 0.004 D_fake: 0.425 
+Exception in user code:
+------------------------------------------------------------
+(epoch: 40, iters: 300, time: 0.055, data: 0.002) G_GAN: 2.739 G_L1: 28.520 D_real: 1.423 D_fake: 0.032 
+Exception in user code:
+------------------------------------------------------------
+Exception in user code:
+------------------------------------------------------------
+Exception in user code:
+------------------------------------------------------------
+(epoch: 40, iters: 400, time: 0.340, data: 0.002) G_GAN: 1.345 G_L1: 26.674 D_real: 0.725 D_fake: 0.402 
+Exception in user code:
+------------------------------------------------------------
+saving the model at the end of epoch 40, iters 16000
+End of epoch 40 / 200 	 Time Taken: 25 sec
+learning rate 0.0002000 -> 0.0002000
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connection.py", line 160, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/util/connection.py", line 84, in create_connection
+    raise err
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/util/connection.py", line 74, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connectionpool.py", line 677, in urlopen
+    chunked=chunked,
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connectionpool.py", line 392, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1277, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1323, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1272, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1032, in _send_output
+    self.send(msg)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 972, in send
+    self.connect()
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connection.py", line 187, in connect
+    conn = self._new_conn()
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connection.py", line 172, in _new_conn
+    self, "Failed to establish a new connection: %s" % e
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7fc2697e5ad0>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/adapters.py", line 449, in send
+    timeout=timeout
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connectionpool.py", line 727, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/util/retry.py", line 439, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /events (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fc2697e5ad0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/visdom/__init__.py", line 711, in _send
+    data=json.dumps(msg),
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/visdom/__init__.py", line 677, in _handle_post
+    r = self.session.post(url, data=data)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/sessions.py", line 578, in post
+    return self.request('POST', url, data=data, json=json, **kwargs)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/sessions.py", line 530, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/sessions.py", line 643, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /events (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fc2697e5ad0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connection.py", line 160, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/util/connection.py", line 84, in create_connection
+    raise err
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/util/connection.py", line 74, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connectionpool.py", line 677, in urlopen
+    chunked=chunked,
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connectionpool.py", line 392, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1277, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1323, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1272, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1032, in _send_output
+    self.send(msg)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 972, in send
+    self.connect()
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connection.py", line 187, in connect
+    conn = self._new_conn()
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connection.py", line 172, in _new_conn
+    self, "Failed to establish a new connection: %s" % e
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7fc2697a52d0>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/adapters.py", line 449, in send
+    timeout=timeout
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connectionpool.py", line 727, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/util/retry.py", line 439, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /events (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fc2697a52d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/visdom/__init__.py", line 711, in _send
+    data=json.dumps(msg),
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/visdom/__init__.py", line 677, in _handle_post
+    r = self.session.post(url, data=data)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/sessions.py", line 578, in post
+    return self.request('POST', url, data=data, json=json, **kwargs)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/sessions.py", line 530, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/sessions.py", line 643, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /events (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fc2697a52d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connection.py", line 160, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/util/connection.py", line 84, in create_connection
+    raise err
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/util/connection.py", line 74, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connectionpool.py", line 677, in urlopen
+    chunked=chunked,
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connectionpool.py", line 392, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1277, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1323, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1272, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1032, in _send_output
+    self.send(msg)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 972, in send
+    self.connect()
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connection.py", line 187, in connect
+    conn = self._new_conn()
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connection.py", line 172, in _new_conn
+    self, "Failed to establish a new connection: %s" % e
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7fc269828890>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/adapters.py", line 449, in send
+    timeout=timeout
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connectionpool.py", line 727, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/util/retry.py", line 439, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /events (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fc269828890>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/visdom/__init__.py", line 711, in _send
+    data=json.dumps(msg),
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/visdom/__init__.py", line 677, in _handle_post
+    r = self.session.post(url, data=data)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/sessions.py", line 578, in post
+    return self.request('POST', url, data=data, json=json, **kwargs)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/sessions.py", line 530, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/sessions.py", line 643, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /events (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fc269828890>: Failed to establish a new connection: [Errno 111] Connection refused'))
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connection.py", line 160, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/util/connection.py", line 84, in create_connection
+    raise err
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/util/connection.py", line 74, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connectionpool.py", line 677, in urlopen
+    chunked=chunked,
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connectionpool.py", line 392, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1277, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1323, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1272, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1032, in _send_output
+    self.send(msg)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 972, in send
+    self.connect()
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connection.py", line 187, in connect
+    conn = self._new_conn()
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connection.py", line 172, in _new_conn
+    self, "Failed to establish a new connection: %s" % e
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7fc269828950>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/adapters.py", line 449, in send
+    timeout=timeout
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connectionpool.py", line 727, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/util/retry.py", line 439, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /events (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fc269828950>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/visdom/__init__.py", line 711, in _send
+    data=json.dumps(msg),
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/visdom/__init__.py", line 677, in _handle_post
+    r = self.session.post(url, data=data)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/sessions.py", line 578, in post
+    return self.request('POST', url, data=data, json=json, **kwargs)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/sessions.py", line 530, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/sessions.py", line 643, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /events (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fc269828950>: Failed to establish a new connection: [Errno 111] Connection refused'))
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connection.py", line 160, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/util/connection.py", line 84, in create_connection
+    raise err
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/util/connection.py", line 74, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connectionpool.py", line 677, in urlopen
+    chunked=chunked,
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connectionpool.py", line 392, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1277, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1323, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1272, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1032, in _send_output
+    self.send(msg)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 972, in send
+    self.connect()
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connection.py", line 187, in connect
+    conn = self._new_conn()
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connection.py", line 172, in _new_conn
+    self, "Failed to establish a new connection: %s" % e
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7fc2697a5890>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/adapters.py", line 449, in send
+    timeout=timeout
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connectionpool.py", line 727, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/util/retry.py", line 439, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /events (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fc2697a5890>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/visdom/__init__.py", line 711, in _send
+    data=json.dumps(msg),
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/visdom/__init__.py", line 677, in _handle_post
+    r = self.session.post(url, data=data)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/sessions.py", line 578, in post
+    return self.request('POST', url, data=data, json=json, **kwargs)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/sessions.py", line 530, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/sessions.py", line 643, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /events (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fc2697a5890>: Failed to establish a new connection: [Errno 111] Connection refused'))
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connection.py", line 160, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/util/connection.py", line 84, in create_connection
+    raise err
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/util/connection.py", line 74, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connectionpool.py", line 677, in urlopen
+    chunked=chunked,
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connectionpool.py", line 392, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1277, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1323, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1272, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 1032, in _send_output
+    self.send(msg)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/http/client.py", line 972, in send
+    self.connect()
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connection.py", line 187, in connect
+    conn = self._new_conn()
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connection.py", line 172, in _new_conn
+    self, "Failed to establish a new connection: %s" % e
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7fc26978c250>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/adapters.py", line 449, in send
+    timeout=timeout
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/connectionpool.py", line 727, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/urllib3/util/retry.py", line 439, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /events (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fc26978c250>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/visdom/__init__.py", line 711, in _send
+    data=json.dumps(msg),
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/visdom/__init__.py", line 677, in _handle_post
+    r = self.session.post(url, data=data)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/sessions.py", line 578, in post
+    return self.request('POST', url, data=data, json=json, **kwargs)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/sessions.py", line 530, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/sessions.py", line 643, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/itetnas04/data-scratch-01/dlim_03hs20/data/conda_envs/machineLearning/lib/python3.7/site-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /events (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fc26978c250>: Failed to establish a new connection: [Errno 111] Connection refused'))
