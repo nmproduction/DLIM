@@ -221,4 +221,13 @@ https://github.com/switchablenorms/CelebAMask-HQ
  2. in the GUI select a input image form the images folder in the same directory and the corresponding labels
 
 ## Stochastic Image Net
-In order to produce stochasticity in the generated images even after having trained a definite network different approaches were tried. The most straightforward was simply to keep dropout on even during testing.
+In order to produce stochasticity in the generated images after having trained a definite network we kept dropout enabled even when testing. For that we use the model stochastic_model.py Furthermore we increased the dropout strength from 0.5 to 0.95 by changing line 456 and 566 in models/networks.py. This will have an effect on the previous results and should be reset to 0.5 in order to obtain similar values. To train the stochastic model we run
+```
+python ./train.py --dataroot ./datasets/facades --model stochastic --name stoch --direction BtoA 
+python ./test.py --dataroot ./datasets/facades --direction BtoA --model stochastic --name stoch 
+```
+We can already look at the results on the test set. Rerunning 
+```
+python ./test.py --dataroot ./datasets/facades --direction BtoA --model stochastic --name stoch 
+```
+will now yield differently looking facades.
