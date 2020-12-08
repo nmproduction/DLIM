@@ -237,3 +237,5 @@ will now yield differently looking facades.
 <img src='imgs/stochastic2_100_fake_B.png' width=200><img src='imgs/stochastic2_101_fake_B.png' width=200><img src='imgs/stochastic2_103_fake_B.png' width=200>
 
 However, we notice that the quality of the images suffers greatly with this modification. There is a tradeoff between stochasticity and accuracy when using a solution with dropout it would seem.
+
+After trying this out we read up on different approaches and it turns out 
