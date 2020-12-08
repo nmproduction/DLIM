@@ -221,7 +221,7 @@ https://github.com/switchablenorms/CelebAMask-HQ
  2. in the GUI select a input image form the images folder in the same directory and the corresponding labels
 
 ## Stochastic Image Net
-In order to produce stochasticity in the generated images after having trained a definite network we kept dropout enabled even when testing. For that we use the model stochastic_model.py Furthermore we increased the dropout strength from 0.5 to 0.95 by changing line 456 and 566 in models/networks.py. This will have an effect on the previous results and should be reset to 0.5 in order to obtain similar values. To train the stochastic model we run
+In order to produce stochasticity in the generated images after having trained a definite network we kept dropout enabled even when testing. For that we use the model stochastic_model.py Furthermore we increased the dropout strength from 0.5 to 0.95 by changing line 456 and 566 in models/networks.py. This should be repeated to reproduce the results. To train the stochastic model we run
 ```
 python ./train.py --dataroot ./datasets/facades --model stochastic --name stoch --direction BtoA 
 python ./test.py --dataroot ./datasets/facades --direction BtoA --model stochastic --name stoch 
@@ -238,4 +238,4 @@ will now yield differently looking facades.
 
 However, we notice that the quality of the images suffers greatly with this modification. There is a tradeoff between stochasticity and accuracy when using a solution with dropout it would seem.
 
-After trying this out we read up on different approaches and it turns out 
+After trying this out we read up on different approaches and it turns out that there is another method that should give better results. Stochasticity is usually introduced through the addition of noise. However, adding noise as an additonal input will likely make the network ignore it since we have direct comparison metrics such as L1- and L2-loss. Therefore we need another solution. Instead of using dropout, stochasticity could be added to the model by a random noise overlaid on the weights at various points in the network. 
