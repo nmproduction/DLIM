@@ -232,13 +232,11 @@ class BaseModel(ABC):
             if net is not None:
                 for param in net.parameters():
                     param.requires_grad = requires_grad
-
     def addNoice2Conv(self, range=[-100,100]):
-        netG = getattr(self,'netG')
-        layer = getattr(netG,'layer0')
-        for module in layer.model:
-            if(isinstance(module,nn.Conv2d)):
-                print(module.conv.weight.size())
+            netG = getattr(self,'netG').module
+            print(netG.model.model.modules)
+
+    def get
                 
 
 
