@@ -81,6 +81,7 @@ python ./test.py --dataroot ./datasets/facades --direction BtoA --model pix2pix 
 ```
 Below you can see the results that we achieved together with the score on inception and fid.
 <img src='imgs/batch_size_experiments.png' width=600><img src='imgs/batch_size_experiments_graph.png' width=600>
+
 Since we strive for a high inception score and a low fid score (upward for both scores in the graph) there seems to be little correlation between the overall quality of the image and the batch size. However, upon closer inspection one sees that with fewer images surfaces are smoother and the images display fewer artifacts.
 
 # Perceptual loss
