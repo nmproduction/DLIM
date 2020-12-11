@@ -11,6 +11,18 @@ Unpaired Image-to-Image Translation using Cycle-Consistent Adversarial Networks.
 Image-to-Image Translation with Conditional Adversarial Networks.<br>
 [Phillip Isola](https://people.eecs.berkeley.edu/~isola), [Jun-Yan Zhu](https://www.cs.cmu.edu/~junyanz/), [Tinghui Zhou](https://people.eecs.berkeley.edu/~tinghuiz), [Alexei A. Efros](https://people.eecs.berkeley.edu/~efros). In CVPR 2017. [[Bibtex]](https://www.cs.cmu.edu/~junyanz/projects/pix2pix/pix2pix.bib)
 
+Table of Contents:
+- Prerequisites
+- Getting Started
+- Using the Inception and FID score
+- Batch size experiments
+- Perceptual loss
+- Adversial losses
+- Different discriminators
+- Training the pix2pix model on the cityscapes dataset
+- Using the GUI to test the most successful model
+- Stochastic image net
+
 ## Prerequisites
 - Linux or macOS
 - Python 3
@@ -62,7 +74,7 @@ The inceptions score uses a convolutional neural network trained on the ImageNet
 
 The fid score solves this issue by comparing the generated images directly to actual images. In order to perform this comparison it also uses the inception network trained on imagenet, but on both the generated and real images. It then extracts the output from intermediate layer and calculates its statistics. With the Wasserstein-2/Fréchet metric these two distributions are then compared. This better captures mode collapse than the inception score.
 
-# Batch size experiments
+## Batch size experiments
 A batch describes a set of datapoints (in our case images) that are fed together to the network. On one hand this helps with computational efficiency, as memory can be copied to the respective devices in larger quantities, on the other hand the gradient in backpropagation is more true to the actual gradient that would be observed for the true risk, since the estimated risk improves the more data is looked at.
 
 Run the following commands in the terminal to train pix2pix with different images per batch and test them. The results should look as below:
@@ -84,7 +96,7 @@ Below you can see the results that we achieved together with the score on incept
 
 Since we strive for a high inception score and a low fid score (upward for both scores in the graph) there seems to be little correlation between the overall quality of the image and the batch size. However, upon closer inspection one sees that with fewer images surfaces are smoother and the images display fewer artifacts.
 
-# Perceptual loss
+## Perceptual loss
 We used parts of the SPADE network (https://github.com/NVlabs/SPADE) to swap an L1 loss for a higher level perceptual loss. For that we added another class to the model folder. You can try it out by simply running it in the terminal`
 ```
 python ./train.py --dataroot ./datasets/facades --model perceptual --name perceptual --direction BtoA 
@@ -95,7 +107,7 @@ Below you can see the results that we achieved together with the score on incept
 
 A perceptual loss is calculated by not comparing two images pixel by pixel, but rather first pass them through an image classifier (such as inception trained on the dataset from the imageNet competition) and then compare some intermediate layer from the network. This way we do not train the network to produce the correct pixels, which are of course very unclear when just looking at a segmentation, but rather to generate a realistic looking image with the right "stuff" in it.
 
-# Adversarial losses
+## Adversarial losses
 We once again oriented ourselves on SPADES and implemented different losses that also compare the fake image directly to the correct one (no usage of perceptual loss). Instead of the usual minimax loss once can try LSGAN, WGAN and Hinge WGAN. The adjusted model (with the option loss) is saved in models/adversarial_losses_model.py
 ```
 python ./train.py --dataroot ./datasets/facades --model adversarial_losses --name adv_og --direction BtoA --gan_mode original
