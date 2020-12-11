@@ -31,20 +31,7 @@ cd DLIM
   - follow the instructions in conda-env.txt to install the rest of the required packages using anaconda (you can also use the import button in anaconda navigator and select conda-env.txt)
 
 ## [Datasets](docs/datasets.md)
-Download pix2pix datasets and create your own datasets.
-
-## [Training/Test Tips](docs/tips.md)
-Best practice for training and testing your models.
-
-## [Frequently Asked Questions](docs/qa.md)
-Before you post a new question, please first look at the above Q & A and existing GitHub issues.
-
-## Custom Model and Dataset
-If you plan to implement custom models and dataset for your new applications, we provide a dataset [template](data/template_dataset.py) and a model [template](models/template_model.py) as a starting point.
-
-## [Code structure](docs/overview.md)
-To help users better understand and use our code, we briefly overview the functionality and implementation of each package and each module.
-
+Most of our work has been done on facades. However, we also looked at the performance on cityscapes. Therefore to verify our results both datasets need to be downloaded.
 
 # DLIM Image Domain Transfer additional requirements
 
