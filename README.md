@@ -29,21 +29,19 @@ cd DLIM
   - For pip users, please type the command `pip install -r requirements.txt`.
   - For Conda users, you can create a new Conda environment using `conda env create -f environment.yml`.
   - follow the instructions in conda-env.txt to install the rest of the required packages using anaconda (you can also use the import button in anaconda navigator and select conda-env.txt)
+  
+- Install torch-fidelity (https://github.com/toshas/torch-fidelity)
+  - For pip users, please type the command `pip install torch-fidelity`.
+  - Notice that it might clash with some versions of pytorch, thus it may be inevitable to work with several at once environments.
 
-### [Datasets]
+### Datasets
 Most of our work has been done on facades. However, we also looked at the performance on cityscapes. Therefore to verify our results both datasets need to be downloaded.
 ```
 bash ./datasets/download_pix2pix_dataset.sh facades
 bash ./datasets/download_pix2pix_dataset.sh cityscapes
 ```
-# DLIM Image Domain Transfer additional requirements
-
-Please install torch-fidelity, since it is used in many places to evaluate our results. 
-https://github.com/toshas/torch-fidelity
-the easiest way to install it is using pip. Notice that it might clash with some versions of pytorch, thus it may be inevitable to work with several environments.
-
-In the following experiments the fid score and inception scores are used extensively. To get these metrics one simply has to run two commands in python. Below you can see an example. To adapt it to different networks only the path of the test results must be adjusted to the previously trained network.
-
+## Using the Inception and FID score
+In the following experiments the inception score and fid score are used extensively. To get these metrics one simply has to run two commands in python. Below you can see an example. To adapt it to different networks only the path of the test results must be adjusted to the previously trained network.
 ```
 from torch_fidelity import calculate_metrics
 
@@ -60,10 +58,13 @@ trained_metrics = calculate_metrics("./results/perceptual/test_latest/images/", 
 print("pretrained metrics", pretrained_metrics)
 print("trained metrics for perceptual", trained_metrics)
 ```
+The inceptions score uses a convolutional neural network trained on the ImageNet competition for image classification. It runs it on the images produced by the generative adversial network and measures the level of confidence of the network in the classification of a single produced image as well as the coverage of different classes over the full set of generated images. That way it can both assess the realism of a single image and the variety of images produced. A shortcoming of inception score is that it does a poor job in preventing mode collapse (the behaviour where the network loses the ability of generating some types of images). Mode collapse would occur for example if the network only produced a single realistic image for each class. By generating each class equally often a very good inception score would be expected.
 
-
+The fid score solves this issue by comparing the generated images directly to actual images. In order to perform this comparison it also uses the inception network trained on imagenet, but on both the generated and real images. It then extracts the output from intermediate layer and calculates its statistics. With the Wasserstein-2/Fréchet metric these two distributions are then compared. This better captures mode collapse than the inception score.
 
 # Batch size experiments
+A batch describes a set of datapoints (in our case images) that are fed together to the network. On one hand this helps with computational efficiency, as memory can be copied to the respective devices in larger quantities, on the other hand the gradient in backpropagation is more true to the actual gradient that would be observed for the true risk, since the estimated risk improves the more data is looked at.
+
 Run the following commands in the terminal to train pix2pix with different images per batch and test them. The results should look as below:
 ```
 python ./train.py --dataroot ./datasets/facades --model pix2pix --name batch1 --direction BtoA --batch_size 1
@@ -80,6 +81,7 @@ python ./test.py --dataroot ./datasets/facades --direction BtoA --model pix2pix 
 ```
 Below you can see the results that we achieved together with the score on inception and fid.
 <img src='imgs/batch_size_experiments.png' width=600><img src='imgs/batch_size_experiments_graph.png' width=600>
+Since we strive for a high inception score and a low fid score (upward for both scores in the graph) there seems to be little correlation between the overall quality of the image and the batch size. However, upon closer inspection one sees that with fewer images surfaces are smoother and the images display fewer artifacts.
 
 # Perceptual loss
 We used parts of the SPADE network (https://github.com/NVlabs/SPADE) to swap an L1 loss for a higher level perceptual loss. For that we added another class to the model folder. You can try it out by simply running it in the terminal`
@@ -90,8 +92,10 @@ python ./test.py --dataroot ./datasets/facades --direction BtoA --model perceptu
 Below you can see the results that we achieved together with the score on inception and fid.
 <img src='imgs/perceptual_loss_facades.png' width=600> <img src='imgs/perceptual_loss_facades_score.png' width=600>
 
+A perceptual loss is calculated by not comparing two images pixel by pixel, but rather first pass them through an image classifier (such as inception trained on the dataset from the imageNet competition) and then compare some intermediate layer from the network. This way we do not train the network to produce the correct pixels, which are of course very unclear when just looking at a segmentation, but rather to generate a realistic looking image with the right "stuff" in it.
+
 # Adversarial losses
-We once again oriented ourselves on SPADES and implemented different losses that also compare the fake image directly to the correct one. Instead of L1 once can try LSGAN, WGAN and Hinge WGAN. The adjusted model (with an option loss) is saved in models/adversarial_losses_model.py
+We once again oriented ourselves on SPADES and implemented different losses that also compare the fake image directly to the correct one (no usage of perceptual loss). Instead of the usual minimax loss once can try LSGAN, WGAN and Hinge WGAN. The adjusted model (with the option loss) is saved in models/adversarial_losses_model.py
 ```
 python ./train.py --dataroot ./datasets/facades --model adversarial_losses --name adv_og --direction BtoA --gan_mode original
 python ./test.py --dataroot ./datasets/facades --direction BtoA --model adversarial_losses --name adv_og
@@ -130,6 +134,8 @@ print("wasserstein_metric", wasserstein_metric)
 Our results are as follows:
 
 <img src='imgs/adversarial_losses_scores.png' width=600><img src='imgs/adversarial_losses_examples.png' width=600>
+
+All these losses try to allow both the generator and discriminator to simultaneously improve their capabilities in a neverending battle. However, for them to make progress it is vital that this battle is balanced. Otherwise one might come to dominate the other, upon which the fight would come to a halt and training would become static. Whereas the minimax loss assumes the output of the discriminator to be probabilites of the image being real/fake the Wasserstein loss is more adaptive. It does not assume classification as real or fake, but rather a "critic" value that ranks images on their respective realness. In order to tackle the problem of saturating gradients when either of the model is vastly outperformed by the other (occuring through sigmoid functions) we can use the least squares gan loss. It penalizes the classification/generation of images proportionally to how far it is off the actual class. Therefore the gradient can only become 0 upon perfect classification/generation of images and the training never plateaus. Through application of a hinge loss for the discriminator/generator pair we effectively search for a support vector machine hyperplane to best/worst separate real and fake images. This also removes the issue of vanishing gradients, since the gradient with respect to the hinge loss is constant on one side of the hyperplane (with a minor offset enforcing the most likely hyperplane even upon perfect performance in respect to the data).
 
 
 ## Different Discimintators
