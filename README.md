@@ -34,7 +34,7 @@ cd DLIM
 Most of our work has been done on facades. However, we also looked at the performance on cityscapes. Therefore to verify our results both datasets need to be downloaded.
 ```
 bash ./datasets/download_pix2pix_dataset.sh facades
-bash ./datasets/download_pix2pix_dataset.sh city_scape
+bash ./datasets/download_pix2pix_dataset.sh cityscapes
 ```
 # DLIM Image Domain Transfer additional requirements
 
