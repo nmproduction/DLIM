@@ -30,9 +30,12 @@ cd DLIM
   - For Conda users, you can create a new Conda environment using `conda env create -f environment.yml`.
   - follow the instructions in conda-env.txt to install the rest of the required packages using anaconda (you can also use the import button in anaconda navigator and select conda-env.txt)
 
-## [Datasets](docs/datasets.md)
+### [Datasets]
 Most of our work has been done on facades. However, we also looked at the performance on cityscapes. Therefore to verify our results both datasets need to be downloaded.
-
+```
+bash ./datasets/download_pix2pix_dataset.sh facades
+bash ./datasets/download_pix2pix_dataset.sh city_scape
+```
 # DLIM Image Domain Transfer additional requirements
 
 Please install torch-fidelity, since it is used in many places to evaluate our results. 
