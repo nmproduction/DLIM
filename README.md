@@ -14,6 +14,7 @@ With the advent of self-driving cars and autonomous drone-delivery systems the s
 - Training the pix2pix model on the cityscapes dataset
 - Using the GUI to test the most successful model
 - Stochastic image net
+- Conclusion
 
 ## Baseline
 
@@ -211,3 +212,6 @@ will now yield differently looking facades.
 However, we notice that the quality of the images suffers greatly with this modification. There is a tradeoff between stochasticity and accuracy when using a solution with dropout it would seem.
 
 After trying this out we read up on different approaches and it turns out that there is another method that should give better results. Stochasticity is usually introduced through the addition of noise. However, adding noise as an additonal input will likely make the network ignore it since we have direct comparison metrics such as L1- and L2-loss. Therefore we need another solution. Instead of using dropout, stochasticity could be added to the model by a random noise overlaid on the weights at various points in the network. 
+
+## Conclusion
+Alex/Philip what did you conclude?
