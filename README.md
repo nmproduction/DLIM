@@ -1,17 +1,9 @@
 # DLIM Image to Image Translation project
 
-This project is heavily based on pix2pix, we in fact started with the repository of pix2pix (https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix) and then modified and added some parts to try our own experiments. Therefore, before getting started it is important to set up all requirements for pix2pix.
-
-Citations for pix2pix:
-
-Unpaired Image-to-Image Translation using Cycle-Consistent Adversarial Networks.<br>
-[Jun-Yan Zhu](https://www.cs.cmu.edu/~junyanz/)\*,  [Taesung Park](https://taesung.me/)\*, [Phillip Isola](https://people.eecs.berkeley.edu/~isola/), [Alexei A. Efros](https://people.eecs.berkeley.edu/~efros). In ICCV 2017. (* equal contributions) [[Bibtex]](https://junyanz.github.io/CycleGAN/CycleGAN.txt)
-
-
-Image-to-Image Translation with Conditional Adversarial Networks.<br>
-[Phillip Isola](https://people.eecs.berkeley.edu/~isola), [Jun-Yan Zhu](https://www.cs.cmu.edu/~junyanz/), [Tinghui Zhou](https://people.eecs.berkeley.edu/~tinghuiz), [Alexei A. Efros](https://people.eecs.berkeley.edu/~efros). In CVPR 2017. [[Bibtex]](https://www.cs.cmu.edu/~junyanz/projects/pix2pix/pix2pix.bib)
+With the advent of self-driving cars and autonomous drone-delivery systems the simplification of a realistic image to a segmented one has never been more essential. Generative adversial networks represent a vital step pushing image to image translation from poor attempts to powerful methods. Apart from aforementioned applications they have proven their usefulness in the artistic community and repeatedly display capabilities previously thought restricted to the human kind. In our project we tackled the task of reconstructing the photoimage of a scene with only its segmentation. For that we based our model on the public pix2pix repository, which has shown quite astonishing results. 
 
 ## Table of Contents:
+- Baseline
 - Prerequisites
 - Getting Started
 - Using the Inception and FID score
@@ -22,6 +14,19 @@ Image-to-Image Translation with Conditional Adversarial Networks.<br>
 - Training the pix2pix model on the cityscapes dataset
 - Using the GUI to test the most successful model
 - Stochastic image net
+
+## Baseline
+
+This project is heavily based on pix2pix, we in fact started with the repository of pix2pix (https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix) and then modified and added some parts to try our own experiments. Pix2pix is a conditional generative adversial network. A generative adversial network is a combination of a generator and a discriminator. The generator and the discriminator play a game, where the generator tries to convince the discriminator that its generated images are actually real images while also feeding a real image every now and then to it to make the discriminator's decision non-trivial. The generator is a convolutional neural network employing a U-net architecture, where it first several layers of convolution reducing the dimension of the intermediate "image" and then deconvolutes the latent information to reproduce once again a full image. The discriminator is a convolutional neural network with a single output describing its confidence in the realness of a fed image. Although in the case of supervised learning other metrics such as a pixel by pixel eucledian comparison (L2 loss) would be possible as well the discriminator can perform the task unsupervised and even in the case of supervision it was shown to improve the quality of textures in the image. The network is considered conditional, since the generator produces its images conditioned on the segmentation instead of random noise.
+
+Citations for pix2pix:
+
+Unpaired Image-to-Image Translation using Cycle-Consistent Adversarial Networks.<br>
+[Jun-Yan Zhu](https://www.cs.cmu.edu/~junyanz/)\*,  [Taesung Park](https://taesung.me/)\*, [Phillip Isola](https://people.eecs.berkeley.edu/~isola/), [Alexei A. Efros](https://people.eecs.berkeley.edu/~efros). In ICCV 2017. (* equal contributions) [[Bibtex]](https://junyanz.github.io/CycleGAN/CycleGAN.txt)
+
+
+Image-to-Image Translation with Conditional Adversarial Networks.<br>
+[Phillip Isola](https://people.eecs.berkeley.edu/~isola), [Jun-Yan Zhu](https://www.cs.cmu.edu/~junyanz/), [Tinghui Zhou](https://people.eecs.berkeley.edu/~tinghuiz), [Alexei A. Efros](https://people.eecs.berkeley.edu/~efros). In CVPR 2017. [[Bibtex]](https://www.cs.cmu.edu/~junyanz/projects/pix2pix/pix2pix.bib)
 
 ## Prerequisites
 - Linux or macOS
