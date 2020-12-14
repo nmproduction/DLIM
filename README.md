@@ -230,7 +230,7 @@ The first attempt by adding a random noise between 0 and 10 gave following resul
 ```
 convs[numconv].weight[[coor[0],coor[1],coor[2],coor[3]]] += noiceAmplitude * tensor.random(1)
 ```
-<img src='imgs/addnoise_100_fake_B.png' width=200><img src='imgs/addnoise_101_fake_B.png' width=200><img src='imgs/addnoise_103_fake_B.png' width=200>
+<img src='imgs/addnoise_100_fake_B.png' width=200><img src='imgs/addnoise_101_fake_B.png' width=200><img src='imgs/addnoise_102_fake_B.png' width=200>
 
 Those results are not satisfying because they look much worse than without the addition of noise to the generator. So, the effect on the weights must be reduced by not using an absolute noise. Instead we could use a noise relative to each weight.
 
