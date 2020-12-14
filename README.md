@@ -159,7 +159,9 @@ All these losses try to allow both the generator and discriminator to simultaneo
 
 ## Different Discimintators
 We did want to see the effect of the discriminator on the final result. So, we did compare the results of three different discriminators and the results of the pix2pix model with no discriminator. This was achieved by commenting out the training and the effect on the generator training in the train.py script.
-The comparison of the different discriminators showed that the discriminator is important for a realistic image. This effect can be amplified by using a multiscale discriminator or different kinds of discriminators.
+
+The comparison of the different discriminators showed that the discriminator is important for a realistic image.Images of the Model with a discriminator, especially multiscale discriminators do have much more details and contrast.
+This effect can be amplified by using a multiscale discriminator or different kinds of discriminators.
 
 
 Our results are:
@@ -230,10 +232,14 @@ convs[numconv].weight[[coor[0],coor[1],coor[2],coor[3]]] += noiceAmplitude * ten
 ```
 <img src='imgs/addnoise_100_fake_B.png' width=200><img src='imgs/addnoise_101_fake_B.png' width=200><img src='imgs/addnoise_103_fake_B.png' width=200>
 
-The second attempt by amplifying the weight by -10 or 10 did end with no results because after the 25th epoch the Loss function where 'nan'.
+Those results are not satisfying because they look much worse than without the addition of noise to the generator. So, the effect on the weights must be reduced by not using an absolute noise. Instead we could use a noise relative to each weight.
+
+The second attempt by amplifying the weight by -10 or 10 did end with no results because after the 25th epoch the Loss function were 'nan'.
 ```
-convs[numconv].weight[[coor[0],coor[1],coor[2],coor[3]]] *= noiceAmplitude * randomSign()
+convs[numconv].weight[[coor[0],coor[1],coor[2],coor[3]]] *= noiseAmplitude * randomSign()
 ```
+
+The next steps must be to get the last idea running and to compare different noise amplitudes as well as the effect of applying noise to multiple weights per layer.
 
 ## Conclusion
 Alex/Philip what did you conclude?
