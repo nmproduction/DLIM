@@ -158,7 +158,16 @@ All these losses try to allow both the generator and discriminator to simultaneo
 
 
 ## Different Discimintators
-Run following code:
+We did want to see the effect of the discriminator on the final result. So, we did compare the results of three different discriminators and the results of the pix2pix model with no discriminator. This was achieved by commenting out the training and the effect on the generator training in the train.py script.
+The comparison of the different discriminators showed that the discriminator is important for a realistic image. This effect can be amplified by using a multiscale discriminator or different kinds of discriminators.
+
+
+Our results are:
+
+<img src='imgs/discrimiator_scores.PNG' width=600>
+
+To reconstruct the results, run following code:
+
 Classical pix2pix discriminator
 ```
 python ./train.py --dataroot ./datasets/facades --model pix2pix --name classic --direction BtoA
@@ -171,12 +180,10 @@ python ./test.py --dataroot ./datasets/facades --direction BtoA --model pix2pix 
 ```
 Sesame multiscale discriminator
 ```
-python ./trainSesame.py --dataroot ./datasets/facades --model pix2pix --name classic --direction BtoA --netD sesam 
-python ./test.py --dataroot ./datasets/facades --direction BtoA --model pix2pix --name classic
+python ./train.py --dataroot ./datasets/facades --model pix2pix --name sesame --direction BtoA --netD sesam 
+python ./test.py --dataroot ./datasets/facades --direction BtoA --model pix2pix --name sesame
 ```
-Our results are:
 
-<img src='imgs/discrimiator_scores.PNG' width=600>
 
 ## Training the pix2pix model on the cityscapes dataset
 
@@ -212,6 +219,21 @@ will now yield differently looking facades.
 However, we notice that the quality of the images suffers greatly with this modification. There is a tradeoff between stochasticity and accuracy when using a solution with dropout it would seem.
 
 After trying this out we read up on different approaches and it turns out that there is another method that should give better results. Stochasticity is usually introduced through the addition of noise. However, adding noise as an additonal input will likely make the network ignore it since we have direct comparison metrics such as L1- and L2-loss. Therefore we need another solution. Instead of using dropout, stochasticity could be added to the model by a random noise overlaid on the weights at various points in the network. 
+
+## Adding random noise to convolution layers
+As mentioned above, we are trying to add random noise to the weights of the convolution layer of the generator.
+After each training epoch we add random noise to one random weight per convolution.
+
+The first attempt by adding a random noise between 0 and 10 gave following results.
+```
+convs[numconv].weight[[coor[0],coor[1],coor[2],coor[3]]] += noiceAmplitude * tensor.random(1)
+```
+<img src='imgs/addnoise_100_fake_B.png' width=200><img src='imgs/addnoise_101_fake_B.png' width=200><img src='imgs/addnoise_103_fake_B.png' width=200>
+
+The second attempt by amplifying the weight by -10 or 10 did end with no results because after the 25th epoch the Loss function where 'nan'.
+```
+convs[numconv].weight[[coor[0],coor[1],coor[2],coor[3]]] *= noiceAmplitude * randomSign()
+```
 
 ## Conclusion
 Alex/Philip what did you conclude?
