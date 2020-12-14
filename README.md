@@ -193,7 +193,7 @@ Our results are:
 
 <img src='imgs/discrimiator_scores.PNG' width=600>
 
-To reconstuct the results, run following code:
+To reconstruct the results, run following code:
 
 Classical pix2pix discriminator
 ```
