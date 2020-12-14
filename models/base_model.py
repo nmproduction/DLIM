@@ -4,6 +4,7 @@ from collections import OrderedDict
 from abc import ABC, abstractmethod
 from . import networks
 import torch.nn as nn
+import random
 
 
 class BaseModel(ABC):
@@ -232,35 +233,36 @@ class BaseModel(ABC):
             if net is not None:
                 for param in net.parameters():
                     param.requires_grad = requires_grad
-      def getConv(self,subModule):
-        results =[]  
-       #print(subModule) 
-        for module in subModule:
-          if isinstance(module,nn.Conv2d):
-            results += [module]
-          elif hasattr(module,'model'):
-            results += self.getConv(module.model)
-        
-        return results
-    
-     def addNoice2Conv(self, noiceAmplitude = 10,num_ef_weights = 10):
-        netG = getattr(self,'netG').module
-        #print(netG.model.model.modules)
-        convs = self.getConv(netG.model.model)
-        for i in range(num_ef_weights):
-          numconv = random.randint(0,len(convs)-1)
-          size = convs[numconv].weight.size()
-          # print(size)
-          # print(size[0])
-          # print(convs[numconv].weight[0,0])
-          coor = [random.randint(0,size[0]-1),random.randint(0,size[1]-1),random.randint(0,size[2]-1),random.randint(0,size[3]-1)]
-          print(convs[numconv].weight[coor[0],coor[1],coor[2],coor[3]])
-          with torch.no_grad():
-            convs[numconv].weight[[coor[0],coor[1],coor[2],coor[3]]] += torch.rand(1).cuda()*noiceAmplitude
-          #random.uniform(noiceRange[0], noiceRange[1])
-          print(convs[numconv].weight[coor[0],coor[1],coor[2],coor[3]])
-        # for conv in :
-        #   print(conv.weight)
+    def getConv(self,subModule):
+      results =[]  
+      #print(subModule) 
+      for module in subModule:
+        if isinstance(module,nn.Conv2d):
+          results += [module]
+        elif hasattr(module,'model'):
+          results += self.getConv(module.model)
+      
+      return results
 
+    def randomSign(self):
+      return 1 if random.random() < 0.5 else -1
+
+    def addNoice2Conv(self, noiceAmplitude = 10,num_ef_weights = 10):
+      netG = getattr(self,'netG').module
+      #print(netG.model.model.modules)
+      convs = self.getConv(netG.model.model)
+      for i in range(num_ef_weights):
+        numconv = random.randint(0,len(convs)-1)
+        size = convs[numconv].weight.size()
+        #print(size)
+        # print(size[0])
+        # print(convs[numconv].weight[0,0])
+        coor = [random.randint(0,size[0]-1),random.randint(0,size[1]-1),random.randint(0,size[2]-1),random.randint(0,size[3]-1)]
+        print(convs[numconv].weight[coor[0],coor[1],coor[2],coor[3]])
+        with torch.no_grad():
+          convs[numconv].weight[[coor[0],coor[1],coor[2],coor[3]]] += convs[numconv].weight[[coor[0],coor[1],coor[2],coor[3]]]*noiceAmplitude*self.randomSign()
+        print(convs[numconv].weight[coor[0],coor[1],coor[2],coor[3]])
+      # for conv in :
+      #   print(conv.weight)
 
         
