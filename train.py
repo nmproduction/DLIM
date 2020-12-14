@@ -36,8 +36,8 @@ if __name__ == '__main__':
     total_iters = 0                # the total number of training iterations
 
     
-    model.addNoice2Conv()
-    exit()
+    
+    
 
     for epoch in range(opt.epoch_count, opt.n_epochs + opt.n_epochs_decay + 1):    # outer loop for different epochs; we save the model by <epoch_count>, <epoch_count>+<save_latest_freq>
         epoch_start_time = time.time()  # timer for entire epoch
@@ -77,7 +77,7 @@ if __name__ == '__main__':
             print('saving the model at the end of epoch %d, iters %d' % (epoch, total_iters))
             model.save_networks('latest',opt.netD=="sesam")
             model.save_networks(epoch,opt.netD=="sesam")
-
+        model.addNoice2Conv()
         
 
         print('End of epoch %d / %d \t Time Taken: %d sec' % (epoch, opt.n_epochs + opt.n_epochs_decay, time.time() - epoch_start_time))
