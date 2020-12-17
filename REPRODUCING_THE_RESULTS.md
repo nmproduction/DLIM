@@ -43,6 +43,9 @@ The GUI is intended to show the capabilities of the networks that we have traine
 We attempted toadapt the gui that was provided in the Git repo to our own model, however
 
 **GUI for testing the model:**
+
+The necessary files for the GUI can bes downloaded here: https://github.com/switchablenorms/CelebAMask-HQ/tree/master/MaskGAN_demo
+
  1. Execute the file CelebAMask-HQ-master\MaskGAN_demo\demo.py using the command `python CelebAMask-HQ-master\MaskGAN_demo\demo.py` this will start the GUI
  2. in the GUI select a input image form the \MaskGAN_demo\samples folder and the corresponding labels. For example 0.jpg and 0.png. 
 
