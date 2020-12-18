@@ -242,4 +242,7 @@ convs[numconv].weight[[coor[0],coor[1],coor[2],coor[3]]] *= noiseAmplitude * ran
 The next steps must be to get the last idea running and to compare different noise amplitudes as well as the effect of applying noise to multiple weights per layer.
 
 ## Conclusion
-Alex/Philip what did you conclude?
+Our project was to experiment with pix2pix and improve it. This was so far successful that our final product compared to the beginning better results did improve significantly. The Loss-function update and a different discriminator did have noticeable impact on our generated images. It is even possible to use our network in with a GUI and edit the images in real-time.
+We would have still stuff to do, to implement a stochastic image network with comparable results.
+
+
